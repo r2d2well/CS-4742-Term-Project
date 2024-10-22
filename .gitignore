@@ -1,0 +1,6 @@
+/results
+/mbti-distilbert-model
+/mbti-bert-model
+/classification_report.txt
+/confusion_matrix.png
+/label_encoder.pkl
