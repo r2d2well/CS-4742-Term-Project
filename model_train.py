@@ -49,6 +49,7 @@ csv_path = os.path.join(dataset_path, "MBTI 500.csv")
 
 logger.info("Loading dataset...")
 try:
+    # This dataset is not optimal, probably should find something better
     data = pd.read_csv(csv_path)
     logger.info(f"Dataset shape: {data.shape}")
     logger.debug(f"First few rows:\n{data.head()}")
@@ -173,8 +174,8 @@ except Exception as e:
     sys.exit(1)
 
 #
-# 7. Dataset Creation
-#
+# Dataset Creation
+# 
 
 logger.info("Creating Torch datasets...")
 
@@ -206,6 +207,8 @@ except Exception as e:
 
 logger.info("Initializing the DistilBERT model for sequence classification...")
 try:
+    # Bert model was not optimal for this small dataset, and took too long
+    # distilbert is much faster and smaller by both 60% while retainig 97% of performance
     model = DistilBertForSequenceClassification.from_pretrained(
         'distilbert-base-uncased',
         num_labels=num_labels
