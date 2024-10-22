@@ -3,6 +3,7 @@ Term project for CS 4742 term project where we try and predicate a person's pers
 
 # How to get Started
 
+
 ## How to Train the model - 
 
 run - 
@@ -10,14 +11,14 @@ run -
 
 wait until it is finished training, it will save checkpoints in case something happens so not much progress is lost
 
-## Run the flask app to start the server - 
+  ## Run the flask app to start the server - 
 
 run - 
 `python app.py`
 
 ## Then startup a new console - 
 
-Make sure to do this in a seperate console  that app.py is running in otherwise it won't work
+Make sure to do this in a seperate console than app.py is running in otherwise it won't work
 
 run - 
 `python model_test.py`
