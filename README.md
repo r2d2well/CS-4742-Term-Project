@@ -27,7 +27,7 @@ python train_model.py --augment-synthetic-data --target-count 10000
 ```
 
 `--overwrite-synthetic-data`
-Overwrites the existing .csv file in /data/ and generates a new one - 
+ - Overwrites the existing .csv file in /data/ and generates a new one - 
 
 Example - 
 ```
