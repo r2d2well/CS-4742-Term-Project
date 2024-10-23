@@ -4,3 +4,5 @@
 /classification_report.txt
 /confusion_matrix.png
 /label_encoder.pkl
+/debug.log
+/data/synthetic_personality_data.csv

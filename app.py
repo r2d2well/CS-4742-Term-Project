@@ -195,7 +195,7 @@ def start_conversation():
             'session_id': session_id,
             'mbti_type': mbti_type,
             'explanation': explanation,
-            'message': "Please provide additional information to refine your personality type prediction."
+            #'message': "Please provide additional information to refine your personality type prediction."
         })
     except Exception as e:
         logger.exception("An error occurred in /start endpoint.")
