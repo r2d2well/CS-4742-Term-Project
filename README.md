@@ -4,21 +4,50 @@ Term project for CS 4742 term project where we try and predicate a person's pers
 # How to get Started
 
 
-## How to Train the model - 
+### How to Train the model - 
 
-run - 
-`python train_model.py`
+By Default the train_model.py will use an existing synthetic_personality_data.csv file if it exists in /data/ instead of overwriting it
+run -
+```
+python train_model.py
+```
+
+### Arguments to put after - 
+
+`--augment-synthetic-data` - 
+Adds on to the existing data set in /data/synthetic_personality_data.csv .
+
+`--target-count 10000'` - 
+Overrides the target amount that it will generate, the default is whichever is the highest in the dataset.
+Will generate 10000 lines per personality.
+
+Example - 
+```
+python train_model.py --augment-synthetic-data --target-count 10000
+```
+
+`--overwrite-synthetic-data` - 
+Overwrites the existing .csv file in /data/ and generates a new one - 
+
+Example - 
+```
+python train_model.py --overwrite-synthetic-data
+```
 
 wait until it is finished training, it will save checkpoints in case something happens so not much progress is lost
 
   ## Run the flask app to start the server - 
 
-run - 
-`python app.py`
+Run - 
+```
+python app.py
+```
 
-## Then startup a new console - 
+### Then startup a new console - 
 
 Make sure to do this in a seperate console than app.py is running in otherwise it won't work
 
-run - 
-`python model_test.py`
+Run - 
+```
+python model_test.py
+```
