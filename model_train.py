@@ -232,7 +232,7 @@ def main():
     # Tokenization
     #
     
-    MAX_LENGTH = 128  # max_length global variable
+    MAX_LENGTH = 256  # max_length global variable
     
     logger.info("Initializing the tokenizer...")
     try:
@@ -343,7 +343,7 @@ def main():
     
     training_args = TrainingArguments(
         output_dir='./results',
-        num_train_epochs=5,                    # Total number of training epochs
+        num_train_epochs=10,                    # Total number of training epochs
         per_device_train_batch_size=16,        # Batch size per device during training
         per_device_eval_batch_size=64,         # Batch size for evaluation
         warmup_steps=100,                     # Reduced number of warmup steps
@@ -351,9 +351,9 @@ def main():
         logging_dir='./logs',
         logging_steps=10,
         evaluation_strategy="steps",           # Evaluate every eval_steps
-        eval_steps=50,                         # Number of steps between evaluations
+        eval_steps=500,                         # Number of steps between evaluations
         save_strategy="steps",                 # Save checkpoints every save_steps
-        save_steps=100,                        # Number of steps between saves
+        save_steps=500,                        # Number of steps between saves
         save_total_limit=5,                    # Only last 5 checkpoints are saved
         load_best_model_at_end=True,           # Load the best model when finished training
         metric_for_best_model="f1_weighted",   # Use weighted F1-score to evaluate the best model
@@ -400,7 +400,7 @@ def main():
         train_dataset=train_dataset,
         eval_dataset=val_dataset,
         compute_metrics=compute_metrics,
-        callbacks=[EarlyStoppingCallback(early_stopping_patience=2)],
+        callbacks=[EarlyStoppingCallback(early_stopping_patience=5)],
     )
     
     #
