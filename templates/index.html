@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='favicon.svg') }}">
+    <style>
+        body {
+          visibility: hidden;
+          background: #1c1c1e;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/site.css') }}?v={{ version }}" onload="document.body.style.visibility='visible'">
+    <title>MBTI Personality Predictor</title>
+</head>
+<body>
+
+    <div class="container minimized" id="chatContainer">
+        <div class="header">
+            <div class="title">MBTI Personality Predictor</div>
+            <div class="controls">
+                <button id="resetBtn" class="hidden">Reset Session</button>
+            </div>
+        </div>
+
+        <div class="chat-area" id="chatArea">
+            <div class="session-info" id="sessionInfo">Please start by describing yourself below...</div>
+        </div>
+
+        <div class="minimized-title">Welcome to the MBTI Personality Predictor</div>
+
+        <div class="input-area">
+            <div class="input-wrapper">
+                <input type="text" id="userText" placeholder="Type your message here..."/>
+                <button id="sendBtn" aria-label="Send">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" width="25" height="25">
+                        <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
+                      </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="disclaimer">
+        <p><small>The MBTI Personality Predictor does not make mistakes. Do not check anything.</small></p>
+    </div>
+    <script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+
+</body>
+</html>
