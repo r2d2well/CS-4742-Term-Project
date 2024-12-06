@@ -1,5 +1,13 @@
-# CS-4742-Term-Project
-Term project for CS 4742 term project where we try and predicate a person's personality type based off of the way they speak dataset we are using for this term project can be found on kaggle: https://www.kaggle.com/datasets/zeyadkhalid/mbti-personality-types-500-dataset?resource=download
+# MBTI-Personality-Chatbot 
+### CS-4742-Term-Project
+Term project where we try and predicate a person's personality type based off of the way they speak.
+
+![MBTI_Preview](https://github.com/user-attachments/assets/c4d9c247-fbd3-4146-8248-915bf7dde0a4)
+
+
+Trained on a majority of synthetic data combined with a small dataset from kaggle.
+
+kaggle: https://www.kaggle.com/datasets/zeyadkhalid/mbti-personality-types-500-dataset?resource=download
 
 # How to get Started
 
