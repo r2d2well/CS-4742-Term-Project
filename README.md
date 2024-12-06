@@ -36,14 +36,21 @@ python train_model.py --overwrite-synthetic-data
 
 wait until it is finished training, it will save checkpoints in case something happens so not much progress is lost
 
-  ## Run the flask app to start the server - 
+  ## Run the flask app to start the dev server - 
 
 Run - 
 ```
 python app.py
 ```
 
-### Then startup a new console - 
+### Open web browser - 
+
+Goto - 
+```
+http://127.0.0.1:5000
+```
+
+### How to test the bot in the terminal - 
 
 Make sure to do this in a seperate console than app.py is running in otherwise it won't work
 
